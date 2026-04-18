@@ -1,41 +1,68 @@
-# UWE Audio Engine — First Page Wireframe
+# UWE Audio Engine — First Page Wireframe (Updated)
 
 ## Purpose
 
-Defines the layout and behavior of the first working UI.
+Defines the layout using structured **control zones** instead of simple panels.
 
 Goal:
-Allow a user to go from **text → audio** in one screen.
+- clearer workflow
+- scalable UI
+- better visibility into system behavior
 
 ---
 
-## Design Principles
+## Design Model
 
-- single-page workflow
-- minimal friction
-- clear action path
-- visible system status
-- no unnecessary complexity
+The UI is divided into **functional control groups**:
+
+1. Input Controls
+2. Mode Controls
+3. Processing Controls
+4. Master Controls
+5. Job Status Panel
+6. Output Panel
 
 ---
 
 ## Layout Overview
 
-Desktop: two-column layout  
-Mobile: stacked layout
+Desktop Layout:
 
 ```text
 ---------------------------------------------------------
 Header
-  UWE Audio Engine
-  Turn text into listenable audio
 ---------------------------------------------------------
 
-Left Panel (Input)        | Right Panel (Job / Output)
+INPUT CONTROLS
 ---------------------------------------------------------
-Source Type               | Current Job Status
-Content Input             | Processing Summary
-Mode Selection            | Output Player
-Options                   | Output Details
-Generate Button           |
+[ Source Type ]
+[ Content Input ]
+
+MODE CONTROLS
+---------------------------------------------------------
+[ Exact Read ] [ Podcast Mode ]
+
+PROCESSING CONTROLS
+---------------------------------------------------------
+[ Voice ]
+[ Chapter Toggle ]
+[ Future Options ]
+
+MASTER CONTROLS
+---------------------------------------------------------
+[ Generate Audio ]
+
+---------------------------------------------------------
+STATUS PANEL
+---------------------------------------------------------
+[ Job State ]
+[ Current Stage ]
+[ Processing Info ]
+
+---------------------------------------------------------
+OUTPUT PANEL
+---------------------------------------------------------
+[ Audio Player ]
+[ Download ]
+[ Output Details ]
 ---------------------------------------------------------
